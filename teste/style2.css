@@ -1,0 +1,36 @@
+*{ background-color: black;}
+article{
+    height: 95vh;
+    width: 95vw;
+    background-image: url(foto2.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+.img2{
+    display: flex;
+    align-items: center;
+    background-image: url(foto1.jpeg);
+    height: 150px;
+    width: 150px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transform-origin: center;
+    transform: rotate(270deg);
+    margin-bottom: 20px;
+}
+#playButton{
+    background-color: aliceblue;
+    width: 60px;
+    height: 40px;
+    transform: rotate(90deg);
+    border: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    text-shadow: 0px 0px 2px blueviolet;
+    letter-spacing: 1px;
+}

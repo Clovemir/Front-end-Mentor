@@ -1,0 +1,36 @@
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>surpresinha</title>
+        <link rel="stylesheet" href="style2.css">
+    </head>
+    <body>
+            <article>
+                <div class="img2">
+                    <button id="playButton">clique aqui</button>
+        <audio id="myAudio" src="musica.mp3"></audio>
+                </div>
+            
+
+            </article>
+            <script>
+                var audio = document.getElementById('myAudio');
+    var playButton = document.getElementById('playButton');
+    var isPlaying = false;
+
+    playButton.addEventListener('click', function() {
+        if (isPlaying) {
+            audio.pause();
+            playButton.textContent = 'Tocar Música';
+        } else {
+            audio.play();
+            playButton.textContent = 'Pausar Música';
+        }
+        isPlaying = !isPlaying;
+    });
+            </script>
+            
+    </body>
+    </html>

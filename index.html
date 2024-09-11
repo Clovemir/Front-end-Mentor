@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="display" readonly>
+        <button onclick="apertarBotao('7')">7</button>
+        <button onclick="apertarBotao('8')">8</button>
+        <button onclick="apertarBotao('9')">9</button>
+        <button onclick="apertarBotao('/')">/</button>
+        <button onclick="apertarBotao('4')">4</button>
+        <button onclick="apertarBotao('5')">5</button>
+        <button onclick="apertarBotao('6')">6</button>
+        <button onclick="apertarBotao('*')">*</button>
+        <button onclick="apertarBotao('1')">1</button>
+        <button onclick="apertarBotao('2')">2</button>
+        <button onclick="apertarBotao('3')">3</button>
+        <button onclick="apertarBotao('-')">-</button>
+        <button onclick="apertarBotao('0')">0</button>
+        <button onclick="apertarBotao('.')">.</button>
+        <button onclick="calcular()">=</button>
+        <button onclick="apertarBotao('+')">+</button>
+        <button onclick="limpar()">C</button>
+    </div>
+
+    <script>
+        function apertarBotao(valor){
+            document.getElementById("display").value+=valor;
+        }
+
+        function calcular(){
+            let expressao = document.getElementById("display").value;
+            try{
+                let resultado = eval(expressao);
+                document.getElementById("display").value = resultado;
+            } catch(error){
+                document.getElementById("display").value = "Erro";
+            }
+        }
+
+        function limpar(){
+            document.getElementById("display").value = "";
+        }
+
+
+    </script>
+    
+</body>
+</html>
